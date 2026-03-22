@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Holi ✨</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;800&family=Poppins:wght@300&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    height:100vh;
+    background:#000;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    font-family:'Poppins', sans-serif;
+    color:white;
+}
+
+/* Neon Light Beams */
+body::before{
+    content:"";
+    position:absolute;
+    width:200%;
+    height:200%;
+    background:conic-gradient(
+        from 0deg,
+        #ff0080,
+        #ffcc00,
+        #00f2ff,
+        #8a2be2,
+        #ff0080
+    );
+    animation: rotate 12s linear infinite;
+    filter: blur(120px);
+    opacity:0.3;
+}
+
+@keyframes rotate{
+    0%{transform:rotate(0deg);}
+    100%{transform:rotate(360deg);}
+}
+
+/* Glass Card */
+.container{
+    position:relative;
+    z-index:2;
+    padding:60px 80px;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(20px);
+    border-radius:25px;
+    box-shadow:0 0 40px rgba(255,255,255,0.1);
+    text-align:center;
+}
+
+/* Neon Heading */
+h1{
+    font-family:'Orbitron', sans-serif;
+    font-size:70px;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    background:linear-gradient(90deg,#ff0080,#ffcc00,#00f2ff,#8a2be2);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow{
+    from{
+        text-shadow:0 0 10px #ff0080,
+                    0 0 20px #ffcc00,
+                    0 0 30px #00f2ff;
+    }
+    to{
+        text-shadow:0 0 20px #ff0080,
+                    0 0 40px #8a2be2,
+                    0 0 60px #00f2ff;
+    }
+}
+
+p{
+    margin-top:25px;
+    font-size:18px;
+    color:#ddd;
+}
+
+/* Floating Color Particles */
+.particle{
+    position:absolute;
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    animation: float 8s linear infinite;
+}
+
+.p1{ background:#ff0080; top:20%; left:15%; }
+.p2{ background:#00f2ff; top:70%; left:25%; animation-duration:10s; }
+.p3{ background:#ffcc00; top:40%; right:20%; animation-duration:9s; }
+.p4{ background:#8a2be2; bottom:15%; right:30%; animation-duration:11s; }
+
+@keyframes float{
+    0%{ transform:translateY(0px);}
+    50%{ transform:translateY(-40px);}
+    100%{ transform:translateY(0px);}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="particle p1"></div>
+<div class="particle p2"></div>
+<div class="particle p3"></div>
+<div class="particle p4"></div>
+
+<div class="container">
+    <h1>Happy Holi</h1>
+    <p>
+        Let the colors of passion, growth, and success light up your journey.
+        Stay fearless. Stay vibrant. Keep shining brighter than ever.
+    </p>
+</div>
+
+</body>
+</html>
