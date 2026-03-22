@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Holi ✨</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    height:100vh;
+    background:#000;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-family:'Poppins', sans-serif;
+}
+
+/* Sparkling Stars Background */
+.star{
+    position:absolute;
+    width:2px;
+    height:2px;
+    background:white;
+    border-radius:50%;
+    animation: twinkle 2s infinite ease-in-out alternate;
+}
+
+@keyframes twinkle{
+    from{ opacity:0.2; transform:scale(1); }
+    to{ opacity:1; transform:scale(1.8); }
+}
+
+/* Moving Color Orbs */
+.orb{
+    position:absolute;
+    width:200px;
+    height:200px;
+    border-radius:50%;
+    filter:blur(100px);
+    opacity:0.6;
+    animation: move 15s infinite alternate ease-in-out;
+}
+
+.orb1{ background:#ff0080; top:10%; left:15%; }
+.orb2{ background:#00f2ff; bottom:15%; right:20%; animation-duration:18s; }
+.orb3{ background:#ffcc00; top:60%; left:60%; animation-duration:20s; }
+
+@keyframes move{
+    0%{ transform:translate(0,0); }
+    50%{ transform:translate(100px,-80px); }
+    100%{ transform:translate(-60px,60px); }
+}
+
+/* Center Content */
+.container{
+    position:relative;
+    z-index:2;
+    text-align:center;
+}
+
+/* Sparkle Gradient Text */
+h1{
+    font-family:'Great Vibes', cursive;
+    font-size:90px;
+    letter-spacing:3px;
+    background:linear-gradient(90deg,#ff0080,#ffcc00,#00f2ff,#8a2be2);
+    background-size:300%;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    animation: shine 6s linear infinite;
+    text-shadow:0 0 15px rgba(255,255,255,0.4);
+}
+
+@keyframes shine{
+    0%{ background-position:0%; }
+    100%{ background-position:300%; }
+}
+
+p{
+    margin-top:20px;
+    font-size:18px;
+    color:#ddd;
+    animation: floatText 4s ease-in-out infinite;
+}
+
+@keyframes floatText{
+    0%,100%{ transform:translateY(0); }
+    50%{ transform:translateY(-10px); }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Random Stars -->
+<div class="star" style="top:10%; left:20%;"></div>
+<div class="star" style="top:30%; left:70%;"></div>
+<div class="star" style="top:50%; left:40%;"></div>
+<div class="star" style="top:80%; left:10%;"></div>
+<div class="star" style="top:70%; left:85%;"></div>
+<div class="star" style="top:25%; left:55%;"></div>
+<div class="star" style="top:60%; left:75%;"></div>
+
+<!-- Moving Color Lights -->
+<div class="orb orb1"></div>
+<div class="orb orb2"></div>
+<div class="orb orb3"></div>
+
+<div class="container">
+    <h1>Happy Holi</h1>
+    <p>
+        May your life sparkle with joy, glow with success,  
+        and shine brighter with every new beginning.
+    </p>
+</div>
+
+</body>
+</html>
