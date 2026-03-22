@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Holi 🌸</title>
+
+<style>
+
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Animated Gradient Background */
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    overflow:hidden;
+    background: linear-gradient(-45deg, #ff0080, #ff8c00, #40e0d0, #8a2be2);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+    color:white;
+}
+
+/* Gradient Animation */
+@keyframes gradientBG {
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* Main Container */
+.container{
+    z-index:2;
+}
+
+/* Main Heading */
+h1{
+    font-size:70px;
+    font-weight:800;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    background: linear-gradient(90deg, #fff, #ffff00, #ff69b4, #00ffff);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+/* Glow Effect */
+@keyframes glow{
+    from{
+        text-shadow:0 0 10px #fff, 0 0 20px #ff0080;
+    }
+    to{
+        text-shadow:0 0 20px #ffff00, 0 0 40px #ff69b4;
+    }
+}
+
+/* Sub Message */
+p{
+    margin-top:20px;
+    font-size:20px;
+    font-weight:300;
+    max-width:600px;
+}
+
+/* Floating Color Circles */
+.circle{
+    position:absolute;
+    border-radius:50%;
+    opacity:0.6;
+    animation: float 6s infinite ease-in-out;
+}
+
+.circle:nth-child(1){
+    width:120px;
+    height:120px;
+    background:#ff0080;
+    top:10%;
+    left:20%;
+}
+
+.circle:nth-child(2){
+    width:80px;
+    height:80px;
+    background:#00ffff;
+    bottom:15%;
+    right:25%;
+    animation-duration:8s;
+}
+
+.circle:nth-child(3){
+    width:150px;
+    height:150px;
+    background:#ffff00;
+    top:60%;
+    left:10%;
+    animation-duration:7s;
+}
+
+@keyframes float{
+    0%{transform:translateY(0px);}
+    50%{transform:translateY(-40px);}
+    100%{transform:translateY(0px);}
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Floating Colors -->
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+
+<div class="container">
+    <h1>Happy Holi</h1>
+    <p>
+        May this festival of colors fill your life with happiness, 
+        success, positivity and bright opportunities. 
+        Keep growing, keep shining, and keep spreading colors of kindness 🌈
+    </p>
+</div>
+
+</body>
+</html>
